@@ -13,7 +13,7 @@ function changeFontSize() {
     document.getElementById("date").style.color = "black";   
 }
 function deleteAll() {
-    document.write("all has been deleted")
+    document.write("all Information has been deleted")
 }
 function alertWindow() {
     window.alert("Please check all input")
@@ -24,9 +24,9 @@ function alertWindow() {
 
 // Automatic html filler
     document.getElementById("count").innerHTML = clock;
-    
+
 
 // Debugging w/ console
 function debugConsole () {
-    console.log("The secondary button has been clicked");
+    console.log("Tracking: The secondary button has been clicked");
 }
