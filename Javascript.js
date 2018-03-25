@@ -28,5 +28,5 @@ function alertWindow() {
 
 // Debugging w/ console
 function debugConsole () {
-    console.log("Tracking: The secondary button has been clicked");
+    console.log("Tracking: Secondary button has been clicked");
 }
