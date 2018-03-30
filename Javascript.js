@@ -1,8 +1,10 @@
 // define variables
 var a = 5;
 var b = a + 2;
-var z = a - b;
+var z = a ** b;
+var fullName = {firstName:"Peter", lastName:"Parker"}; // Object
 var clock = "way to late";
+var ingredients = ["banana", "nutbutter","milk"];
 
 //only active when function is called upon
 function displayNone() {
@@ -17,6 +19,12 @@ function deleteAll() {
 }
 function alertWindow() {
     window.alert("Please check all input")
+}
+function exponentialOutput() {
+    document.getElementById("body").innerHTML = fullName.firstName + " " + fullName.lastName;
+}
+function boolean() {
+    document.getElementById("count").innerHTML = a == b;
 }
 
 // do addition (no funtion necessary btw)
