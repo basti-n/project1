@@ -8,13 +8,18 @@
     <body>
         <div id="body" onclick="exponentialOutput()">Try Git Commit</div>
     
-    <h2>This is an H2</h2>
+    <h2 id="subline">This is an H2</h2>
 
     <p id="date" onclick="changeFontSize()">Date and time are essential</p>
-    <button id="button" onmouseover="displayNone()" onmouseover="alertWindow()" type="button" >Size Me Up!</button>
+    <button id="button" onclick="changeFontSize()"
+            onmouseover="displayNone()" 
+            onmouseover="alertWindow()"         
+            type="button">
+            Size Me Up!</button>
     <button id="button" onclick="deleteAll(); debugConsole()" type="button" >Delete!</button>
 
-    <p id="count" onmouseover="boolean()" onclick="countAddition(2,8)"></p>
+    <p id="count" onmouseover="boolean()" onclick="countAddition(2,8)">Take a count</p>
+    <p id="valuedAdded" onclick="countAddition(p1,p2)">Add me!</p>
     
     <!-- JavaScript--> 
     <script src="Javascript.js">
