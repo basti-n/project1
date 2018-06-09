@@ -6,14 +6,17 @@
     </head>
     <!-- Main HTML -->
     <body>
-        <div id="body" onclick="exponentialOutput()">Try Git Commit</div>
+        <div id="body" onkeydown="keydown()" onclick="exponentialOutput()">Try Git Commit</div>
     
-    <h2 id="subline">This is an H2</h2>
+    <label for="moveRight">Move Right?</label>
+    <input id ="moveRight" type="checkbox"/> 
 
-    <p id="date" onclick="changeFontSize()">Date and time are essential</p>
+    <h1 id="mainline">Move Right and left</h1>  
+    <h2 id="subline" onclick="studentAge()">This is an H2</h2>
+
+    <p id="date" onclick="randomFontSize(); changeFontSize()">Date and time are essential</p>
     <button id="button" onclick="changeFontSize()"
-            onmouseover="displayNone()" 
-            onmouseover="alertWindow()"         
+            onmouseover="debugConsole1();displayNone(); alertWindow()"    
             type="button">
             Size Me Up!</button>
     <button id="button" onclick="deleteAll(); debugConsole()" type="button" >Delete!</button>
@@ -21,6 +24,15 @@
     <p id="count" onmouseover="boolean()" onclick="countAddition(2,8)">Take a count</p>
     <p id="valuedAdded" onclick="countAddition(p1,p2)">Add me!</p>
     
+    <form>
+      Number of bananas <br>
+      <input type="range" min="0" max="10" step="1"> <br>
+      If higher than 10, please specify <br>
+      <input type=text name="higherThan10" size="50" placeholder="not required"
+             onkeydown="alertWindow()">
+
+    </form>
+
     <!-- JavaScript--> 
     <script src="Javascript.js">
 

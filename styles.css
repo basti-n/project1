@@ -2,14 +2,33 @@ body {
     background-color: powderblue;
     font-size: 220%;
 }
+
+label {
+    margin-top: 5px;
+    font-size: 100%;
+    font-style: italic;
+}
+
 h1 {
     color: blue;
     font-size: 200%;
+    padding-bottom: 5px;
+    display: flex;
+    border-radius: 100%;
+    animation-name: rightleft;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
 }
 h2 {
     font-family: monospace;
     font-feature-settings: "blwf";
-    font-size: 120%
+    font-size: 120%;
+    align-items: center;
+    padding-bottom: inherit;
+    animation-name: spin;
+    animation-duration: 2s;
 }
 button{
     display: block;
@@ -19,3 +38,28 @@ p {
     color: red;
     font-style: oblique;
 } 
+
+#moveRight {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(109, 131, 131);
+}
+
+:checked ~ h1 {
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(-720deg);
+    }
+}
+
+@keyframes rightleft {
+    0%, 100% {
+        transform: translate(0px);
+    }
+    50% {
+        transform: translate(50px);
+    }
+}
