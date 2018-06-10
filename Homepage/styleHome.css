@@ -1,0 +1,26 @@
+body {
+    background-color: #7f7f7f;
+}
+
+.item-header {
+    grid-area: header;
+}
+.item-navigation {
+    grid-area: navigation;
+}
+.item-main {
+    grid-area: main;
+}
+.item-footer {
+    grid-area: footer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 50px 50px auto 50px 50px;
+    grid-template-rows: 20px auto 30px; 
+    grid-template-areas:
+        "header header header header header"
+        "navigation . main main main "
+        "footer footer footer footer footer";
+}
