@@ -14,6 +14,29 @@ let snake [
     {x:110, y:150};
 ]
 
+
+drawSnake(); 
+
+function drawSnake () {
+    //loop through all snake parts to draw
+    snake.foreach(drawSnakePart)
+}
+
+function drawSnakePart (snakePart) {
+
+    // define snake color
+    ctx.fillstyle(SNAKE_COLOR);
+
+    // define border color for snake
+    ctx.rectstyle(SNAKE_BORDER);
+
+    // Fill snake with color
+    ctx.fillRect(snakePart.x, snakePart.y, 10, 10);
+
+    // Fill border color of snake
+    ctx.strokeRect(snakePart.x, snakePart.y, 10, 10);
+}
+
 // get the canvas element
 var gameCanvas = document.getElementById("gameCanvas");
 
