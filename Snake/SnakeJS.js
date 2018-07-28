@@ -17,6 +17,7 @@ let snake = [
 let dx = 10; 
 let dy = 0;
 let score = 0; 
+let changingDirection = false; 
 
 // get the canvas element
 var gameCanvas = document.getElementById("gameCanvas");
@@ -64,6 +65,7 @@ function main(){
 
     setTimeout(function OnTick() {
         
+        changingDirection = false;  
         clearCanvas();
         drawFood();
         advanceSnake();
@@ -104,6 +106,10 @@ function changeDirection(event) {
     const goingDown = dy === 10;
     const goingRight = dx === 10;
     const goingLeft = dx === -10;
+
+    if(changingDirection) return;
+
+    changingDirection = true; 
 
     if (keyPressed === LEFT_KEY && !goingRight) {
         dx = -10;
