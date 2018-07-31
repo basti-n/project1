@@ -1,9 +1,22 @@
 body {
     background-color: #7f7f7f;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    background-image: url('https://thumbs.dreamstime.com/z/milk-splash-14275789.jpg');
+    color: white; 
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px;
 }
 
 .item-header {
     grid-area: header;
+    background: url("http://www.carolinaelectricalresources.com/images/Header.jpg") no-repeat;
+    background-size: 100% 100%;
 }
 .item-navigation {
     grid-area: navigation;
@@ -16,16 +29,18 @@ body {
 }
 
 .item-aboutMe {
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-area: aboutMe;
 }
 
 .container {
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 50px 50px auto 50px 50px;
-    grid-template-rows: 20px auto 30px; 
+    margin: 0px;
+    grid-gap: 0px;
+    grid-template-columns: 50px 50px calc(100vw - 210px) 50px 50px;
+    grid-template-rows: 20vh calc(70vh - 15px) 10vh; 
     grid-template-areas:
         "header header header header header"
         "navigation . main main main "
-        "footer footer footer footer footer";
+        "footer footer footer footer aboutMe";;
 }
