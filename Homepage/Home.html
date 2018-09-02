@@ -8,12 +8,42 @@
 
 <body>
     <div class="container">
-        <div class="item-header">Header</div>
-        <div class="item-navigation">Navigation</div>
-        <div class="item-main">Main</div>
-        <div class="item-footer">Footer</div>
-        <div class="item-aboutMe">About Me</div>
-    </div>
+        <div class="item-header" name="header">
+            <h1>::before && ::after Triathlon. there is me. there is coding.</h1>
+            <img id="me" src="Resources/me.jpg">
+        </div>
+        <div class="item-navigation" name="navigation">
+            <nav class="nav-menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul>
+                    <li><a href="#">Über mich</a></li>
+                    <li><a href="#">Werdegang</a></li>
+                    <li><a href="#">Interessen</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>    
+            </nav>        
+        </div>
+        <div class="item-main">
     
+        </div>
+        <div class="item-footer" name="footer">
+            <p id="footer">Sebastian Neumair, Karl-von-Roth-Str. 19, 80997 München</p>
+        </div>
+        <div class="item-aboutMe">
+            <div id="fb">
+                <a href="https://www.facebook.com/sebastian.neumair" target="_blank">
+                    <img id="fb_logo" class="social fb" src="Resources/Social/facebook.svg" alt="facebook">
+                </a>
+            </div>
+            <div id="ig">
+                <a href="https://www.instagram.com/n89basti/" target="_blank">
+                        <img id="ig_logo" class="social ig" src="Resources/Social/instagram.svg" alt="instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="HomeJS.js"></script>
 </body>
 </html>
