@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <h1>User Data</h1>
+    <div class='container'>
+        <ul id='authors'></ul>
+    </div>
+</body>
+
+
+<script>
+
+function createNode (element) {
+    return document.createElement(element);
+}
+
+function appender (parent, el) {
+    return parent.appendChild(el);
+}
+
+const ul = document.getElementById('authors');
+const url = 'https://randomuser.me/api/?results=10';
+
+fetch(url)
+    .then((resp) => resp.json())
+    .then (function(data) {
+        let authors = data.results;
+        return authors.map(function(author) {
+            let li = createNode('li');
+            let span = createNode('span');
+            let img = createNode('img');
+        img.src = author.picture.medium; 
+        span.innerHTML = `${author.name.first} ${author.name.last}`; 
+        appender(li, img);
+        appender(li, span);
+        appender(ul, li);
+        })
+        })
+    .catch (function(error) {
+        alert(error);
+        console.log(error);
+    });
+
+console.log(fetch(url));
+
+</script>
+
+<style>
+
+body {
+    background-color: lightcyan;
+    margin-right: 30px;
+}
+
+h1 {
+    font-stretch: expanded;
+    color: brown;
+    font-style: italic,
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: calc(33vw - 10px) calc(33vw - 10px) calc(33vw - 10px); 
+    grid-gap: 5px;
+    padding-left: 10px;
+}
+
+.container {
+    margin-right: 20px;
+}
+
+li {
+    border: 1px solid brown;
+}
+
+li:hover {
+    transform: scale(1.1);
+    transform: rotateY(20°);
+    border: none;
+    background-color: lightgray;
+}
+
+</style>
+
+</html>
